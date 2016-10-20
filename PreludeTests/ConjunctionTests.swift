@@ -1,11 +1,6 @@
 //  Copyright (c) 2015 Rob Rix. All rights reserved.
 
 final class ConjunctionTests: XCTestCase {
-	func testUnitComposition() {
-		let (a, b): (Int?, Int) = (2, 2)
-		XCTAssertEqual((a &&& unit(b)).map(+) ?? 0, 4)
-	}
-
 	func testPairsNonNilOperands() {
 		let left: Int? = 0
 		let right: String? = ""
@@ -23,7 +18,7 @@ final class ConjunctionTests: XCTestCase {
 	func testShortCircuits() {
 		var effects = 0
 		let left: Int? = nil
-		let right = { ++effects }
+		let right = { effects += 1 }
 		XCTAssert((left &&& right()).map(const(true)) == nil)
 		XCTAssertEqual(effects, 0)
 	}

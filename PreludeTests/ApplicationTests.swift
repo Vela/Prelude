@@ -4,6 +4,7 @@ import Prelude
 import XCTest
 
 final class ApplicationTests: XCTestCase {
+
 	// MARK: Forward function application
 
 	func testForwardUnaryFunctionApplication() {
@@ -26,11 +27,10 @@ final class ApplicationTests: XCTestCase {
 		XCTAssertEqual(digits, 3)
 	}
 
-
 	// MARK: Backward function application
 
 	func testBackwardUnaryFunctionApplication() {
-		let digits = count <| (toString <| 100)
+		let digits = count <| toString <| 100
 		XCTAssertEqual(digits, 3)
 	}
 
@@ -39,40 +39,40 @@ final class ApplicationTests: XCTestCase {
 	}
 
 	func testBackwardPipelineWithMixedArity() {
-		let digits = count <| (toString <| ((+) <| (75, 25)))
+		let digits = count <| toString <| (+) <| (75, 25)
 		XCTAssertEqual(digits, 3)
 	}
 
 	func testBackwardFunctionApplicationWithAssignment() {
 		var digits = 0
-		digits += count <| (toString <| 100)
+		digits += count <| toString <| 100
 		XCTAssertEqual(digits, 3)
 	}
 
 	func testBackwardPartialBinaryFunctionApplication() {
-		let strings = flip(map) <| toString <| [1, 2, 3]
+		let strings = (flip(map) <| toString) <| [1, 2, 3]
 		XCTAssertEqual(strings, ["1", "2", "3"])
 	}
 
 	func testBackwardPartialTernaryFunctionApplication() {
-		let sum: [Int] -> Int = flip(reduce) <| (+) <| 0
+		let sum: ([Int]) -> Int = (flip(reduce) <| (+)) <| 0
 		XCTAssertEqual(sum([1, 2, 3]), 6)
 	}
 }
 
 
 func toString<T>(x: T) -> String {
-	return String(x)
+	return String(describing: x)
 }
 
 func count(string: String) -> Int {
 	return string.characters.count
 }
 
-func map<S: SequenceType, T>(sequence: S, _ transform: S.Generator.Element -> T) -> [T] {
+func map<S: Sequence, T>(sequence: S, _ transform: (S.Iterator.Element) -> T) -> [T] {
 	return sequence.map(transform)
 }
 
-func reduce<S: SequenceType, T>(sequence: S, initial: T, @noescape combine: (T, S.Generator.Element) -> T) -> T {
-	return sequence.reduce(initial, combine: combine)
+func reduce<S: Sequence, T>(sequence: S, initial: T, combine: (T, S.Iterator.Element) -> T) -> T {
+	return sequence.reduce(initial, combine)
 }

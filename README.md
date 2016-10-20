@@ -16,8 +16,8 @@ Notably, this framework does not provide any new types, or any functions which o
 	- [`curry`](#curry)
 	- [`flip`](#flip)
 	- [`&&&`](#-)
-	- [`unit`](#unit)
 	- [`swap`](#swap)
+	- [`first` and `second`](#first-and-second)
 - [Documentation](#documentation)
 - [Integration](#integration)
 
@@ -135,16 +135,6 @@ map([1, 2, 3], flip(-) <| 1) // => [0, 1, 2]
 ```swift
 let (x: Int?, y: Int?) = (2, 2)
 (x &&& y).map(+) // => .Some(4)
-``` 
-
-
-## `unit`
-
-Sometimes you have a function which produces `T`, but you need one which produces `Optional<T>`. `unit` returns its argument wrapped in an `Optional`, so you can compose with it:
-
-```swift
-let (x: Int?, y: Int) = (2, 2)
-(x &&& unit(y)).map(+) // => .Some(4)
 ```
 
 
@@ -156,6 +146,13 @@ Swift’s tuples are very convenient, but sometimes when you get one, it’s the
 map(enumerate("hello"), swap) // => [(h, 0), (e, 1), (l, 2), (l, 3), (o, 4)]
 ```
 
+## `first` and `second`
+
+Getting one value from a tuple is a common operation that can be expressed with `first` and `second` functions. Operators provide first and second values of two-elements tuple accordingly.
+
+```swift
+[(0,0), (5, 1), (9, 2)].map(second) // => [0, 1, 2]
+```
 
 # Documentation
 

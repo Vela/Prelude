@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1168F80C1CF91A7E00DE07DC /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80B1CF91A7E00DE07DC /* Tuple.swift */; };
+		1168F80E1CF91B1700DE07DC /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80D1CF91B1700DE07DC /* TupleTests.swift */; };
+		1168F80F1CF91B1700DE07DC /* TupleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80D1CF91B1700DE07DC /* TupleTests.swift */; };
+		1168F8101CF91F2200DE07DC /* Tuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1168F80B1CF91A7E00DE07DC /* Tuple.swift */; };
 		547B48191A39A78300B60CA9 /* Prelude.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 547B480E1A39A78200B60CA9 /* Prelude.framework */; };
 		547B48271A39A7B400B60CA9 /* Prelude.h in Headers */ = {isa = PBXBuildFile; fileRef = D4D33D8719FE8F8C001D051D /* Prelude.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		547B48281A39A7BD00B60CA9 /* Prelude.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D33D9E19FE8FAE001D051D /* Prelude.swift */; };
@@ -60,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1168F80B1CF91A7E00DE07DC /* Tuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tuple.swift; sourceTree = "<group>"; };
+		1168F80D1CF91B1700DE07DC /* TupleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TupleTests.swift; sourceTree = "<group>"; };
 		547B480E1A39A78200B60CA9 /* Prelude.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Prelude.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		547B48181A39A78300B60CA9 /* Prelude-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Prelude-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D461E3F61A943DA6005E6A15 /* Optional.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Optional.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				D4BAF0411A2E79D6006E25DF /* Fix.swift */,
 				D4C9A1161A34D5E5009C6CD3 /* Flip.swift */,
 				D461E3F61A943DA6005E6A15 /* Optional.swift */,
+				1168F80B1CF91A7E00DE07DC /* Tuple.swift */,
 				D4D33D8519FE8F8C001D051D /* Supporting Files */,
 			);
 			path = Prelude;
@@ -174,6 +181,7 @@
 				D4E7A80A1A2D3A740080A4DF /* CurryTests.swift */,
 				D4BAF0431A2E79E5006E25DF /* FixTests.swift */,
 				D4C9A1181A34D606009C6CD3 /* FlipTests.swift */,
+				1168F80D1CF91B1700DE07DC /* TupleTests.swift */,
 				D4D33D9219FE8F8C001D051D /* Supporting Files */,
 			);
 			path = PreludeTests;
@@ -288,7 +296,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Rob Rix";
 				TargetAttributes = {
 					547B480D1A39A78200B60CA9 = {
@@ -361,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F8101CF91F2200DE07DC /* Tuple.swift in Sources */,
 				547B48291A39A7BD00B60CA9 /* Application.swift in Sources */,
 				547B482A1A39A7BD00B60CA9 /* Compose.swift in Sources */,
 				D461E3F81A943E26005E6A15 /* Optional.swift in Sources */,
@@ -375,6 +384,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F80F1CF91B1700DE07DC /* TupleTests.swift in Sources */,
 				547B48331A39A7EF00B60CA9 /* FlipTests.swift in Sources */,
 				547B482F1A39A7EF00B60CA9 /* ApplicationTests.swift in Sources */,
 				547B482E1A39A7EF00B60CA9 /* PreludeTests.swift in Sources */,
@@ -389,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F80C1CF91A7E00DE07DC /* Tuple.swift in Sources */,
 				D4BC08F31A3385BE007D52F8 /* Application.swift in Sources */,
 				D4D33D9F19FE8FAE001D051D /* Prelude.swift in Sources */,
 				D461E3F71A943DA6005E6A15 /* Optional.swift in Sources */,
@@ -403,6 +414,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1168F80E1CF91B1700DE07DC /* TupleTests.swift in Sources */,
 				D4C9A1191A34D606009C6CD3 /* FlipTests.swift in Sources */,
 				D4D33D9519FE8F8C001D051D /* PreludeTests.swift in Sources */,
 				D4E7A80B1A2D3A740080A4DF /* CurryTests.swift in Sources */,
@@ -433,7 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1.2;
@@ -441,6 +453,7 @@
 				INFOPLIST_FILE = Prelude/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_MODULE_NAME = Prelude;
 				PRODUCT_NAME = Prelude;
 				SDKROOT = iphoneos;
@@ -453,7 +466,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1.2;
@@ -461,6 +474,7 @@
 				INFOPLIST_FILE = Prelude/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_MODULE_NAME = Prelude;
 				PRODUCT_NAME = Prelude;
 				SDKROOT = iphoneos;
@@ -476,6 +490,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PreludeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 			};
@@ -487,6 +502,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PreludeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -506,15 +522,19 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 4;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -533,6 +553,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -551,8 +572,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
@@ -561,6 +584,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -571,6 +595,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -590,6 +616,7 @@
 				INFOPLIST_FILE = Prelude/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Prelude;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -611,6 +638,7 @@
 				INFOPLIST_FILE = Prelude/Info.plist;
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Prelude;
 				SKIP_INSTALL = YES;
 				VALID_ARCHS = x86_64;
@@ -631,6 +659,7 @@
 				);
 				INFOPLIST_FILE = PreludeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -645,6 +674,7 @@
 				);
 				INFOPLIST_FILE = PreludeTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.antitypical.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
